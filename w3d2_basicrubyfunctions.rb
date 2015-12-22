@@ -24,6 +24,8 @@ def StringRead(string)
 end
 
 
-StringRead("Hungry Hungry Hippos came to play at the swamp. To us the hippos have never been this hungry before. I hope the hippos brought plenty of swampwater. Hooray for hippos!");
+StringRead("Hungry Hungry Hippos came to play at the swamp. \\
+  To us the hippos have never been this hungry before. I hope the hippos \\
+  brought plenty of swampwater. Hooray for hippos!");
 
 
