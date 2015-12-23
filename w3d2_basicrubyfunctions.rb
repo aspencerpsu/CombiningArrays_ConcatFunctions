@@ -31,7 +31,7 @@ StringRead("Hungry Hungry Hippos came to play at the swamp. \\
 class AkeemGameAdventure 
   attr_accessor :ammo, :daggers, :potions
 
-  def initialize(ammmo, daggers, potions) 
+  def initialize
     @ammo = 200
     @daggers = 100
     @potions = 25
@@ -89,12 +89,14 @@ class AkeemGameAdventure
     if action == "daggers"
       puts "How many daggers"
       daggers_to_use = gets.chomp
+      daggers_to_use
       @daggers-daggers_to_use
       return "scene3"
     elsif action == "ammo"
       puts "How much ammunition should be used to"
       puts "waste these two suckers?"
       ammo_to_use = gets.chomp
+      ammo_to_use
       @ammo-ammo_to_use
       return "scene3"
     elsif action == "stand your ground"
@@ -104,19 +106,31 @@ class AkeemGameAdventure
             the good fight?"
       choice = gets.chomp.downcase
 
-     if choice == "yes"
-      @potions -= 1
-      return 'scene1'
-     else choice == "no"
+      if choice == "yes"
+        @potions -= 1
+        return 'scene1'
+      else choice == "no"
         return "GAME OVER"
     else
       print "please follow along with the this linear game"
       return "scene1"
 
   def start
-    while 
-
-
+    while @potions && @ammo && @daggers > 0
+      # initialize the game/start the game
+      puts "Welcome to Akeem's Adventures games!!!"
+      scene1 
+    end
   end
+
+end
+
+# run a new instance of the game by creating a varaible for the game:
+
+game1 = AkeemGameAdventure.new
+
+#Start the game now using the variable of the game
+
+game1
 
       
