@@ -53,11 +53,13 @@ class AkeemGameAdventure
     if action == "daggers"
       puts "How many daggers?"
       dagger_to_use = gets
+      daggers_to_use
       @daggers - daggers_to_use
       return "scene2"
     elsif action == "ammo"
       puts "How much ammo to waste the fool?"
       ammo_to_use = gets
+      ammo_to_use
       @ammo - ammo_to_use
       return "scene2"
     elsif action == "stand your ground"
@@ -116,7 +118,7 @@ class AkeemGameAdventure
       return "scene1"
 
   def start
-    while @potions && @ammo && @daggers > 0
+    while @potions && @ammo || @daggers > 0
       # initialize the game/start the game
       puts "Welcome to Akeem's Adventures games!!!"
       scene1 
