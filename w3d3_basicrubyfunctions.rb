@@ -29,7 +29,9 @@ rotate(['monkeys', 'alligators','tigers','bears','zebras', 'ponies'], 3)
 
 def factorial(number)
 	if number < 0
-		print "\n undefined"
+		return "undefined"
+	elsif number == 0
+		return 1
 	else
 		# Init the counter with a number one less than the original to start
 		deinc = number-1
@@ -37,10 +39,8 @@ def factorial(number)
 			# The number will always multiply by the next interation of the deinc
 			number *= deinc
 			deinc -= 1
-			# return false if deinc == 0
 			if deinc == 0 
-				puts
-				print "\n #{number}"
+				print "\n #{number} \n"
 			else 
 				# continue with the next step within the factorial 
 				next
